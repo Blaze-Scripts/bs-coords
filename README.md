@@ -35,8 +35,6 @@ A sleek, lightweight coordinate and heading display tool for RedM development. E
 | J | Copy Z coordinate |
 | L | Copy heading |
 
-You can also click directly on any value in the display to copy it to your clipboard.
-
 ## ⚙️ Configuration
 
 Edit the `config.lua` file to customize the tool:
