@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blaze Scripts Coords</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="coordinfo" v-show="isVisible" :class="position">
+            <div class="header">
+                <h2>Dev: Coords</h2>
+                <div class="status">ACTIVE</div>
+            </div>
+            
+            <div class="info-row">
+                <div class="label">VECTOR3</div>
+                <div class="value copy-value" @click="copyToClipboard('vector3')">{{ coordInfo.vector3 || '-' }}</div>
+            </div>
+            
+            <div class="info-row">
+                <div class="label">VECTOR4</div>
+                <div class="value copy-value" @click="copyToClipboard('vector4')">{{ coordInfo.vector4 || '-' }}</div>
+            </div>
+            
+            <div class="coords-container">
+                <div class="coord-item">
+                    <div class="label">X</div>
+                    <div class="value copy-value" @click="copyToClipboard('x')">{{ formatNumber(coordInfo.x) }}</div>
+                </div>
+                <div class="coord-item">
+                    <div class="label">Y</div>
+                    <div class="value copy-value" @click="copyToClipboard('y')">{{ formatNumber(coordInfo.y) }}</div>
+                </div>
+                <div class="coord-item">
+                    <div class="label">Z</div>
+                    <div class="value copy-value" @click="copyToClipboard('z')">{{ formatNumber(coordInfo.z) }}</div>
+                </div>
+            </div>
+            
+            <div class="info-row">
+                <div class="label">HEADING</div>
+                <div class="value copy-value" @click="copyToClipboard('heading')">{{ formatNumber(coordInfo.heading) }}</div>
+            </div>
+            
+            <div class="controls">
+                <div><span class="key">E</span> Copy vector3</div>
+                <div><span class="key">R</span> Copy vector4</div>
+                <div><span class="key">G</span> Copy X</div>
+                <div><span class="key">H</span> Copy Y</div>
+                <div><span class="key">J</span> Copy Z</div>
+                <div><span class="key">L</span> Copy heading</div>
+                <div><span class="key">DEL</span> Toggle display</div>
+            </div>
+        </div>
+        
+        <div class="copy-flash" v-show="showCopyFlash">{{ copyMessage }}</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
