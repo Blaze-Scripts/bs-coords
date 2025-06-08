@@ -81,7 +81,6 @@ For support, join our Discord server: https://discord.gg/xUcj2R4ZX4
 
 ## 🔗 Links
 
-- 🧾 GitHub: [Blaze Scripts](https://github.com/Blaze-Scripts/)
 - 💬 Discord: [Join our Discord](https://discord.gg/xUcj2R4ZX4)
 - 👀 More Free Scripts: [Blaze Scripts](https://github.com/Blaze-Scripts/)
 
